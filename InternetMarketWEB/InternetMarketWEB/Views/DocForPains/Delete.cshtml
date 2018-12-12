@@ -1,0 +1,58 @@
+﻿@model InternetMarketWEB.Models.DocForPain
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DocForPain</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Organization)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Organization)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Contragent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Contragent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataLoad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataLoad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataLoad1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataLoad1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dataload2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dataload2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dataload3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dataload3)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

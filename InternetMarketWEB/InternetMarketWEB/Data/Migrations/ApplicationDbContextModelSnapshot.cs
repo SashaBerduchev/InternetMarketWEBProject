@@ -105,6 +105,320 @@ namespace InternetMarketWEB.Data.Migrations
                     b.ToTable("computers");
                 });
 
+            modelBuilder.Entity("InternetMarketWEB.Models.Contragents", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Oblast");
+
+                    b.Property<string>("Region");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("contragents");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NameCountry");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("countries");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.CPU", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Architecture");
+
+                    b.Property<string>("Chastota");
+
+                    b.Property<string>("Cores");
+
+                    b.Property<string>("GPU");
+
+                    b.Property<string>("KESHL1");
+
+                    b.Property<string>("KESHL2");
+
+                    b.Property<string>("KESHL3");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("RAM");
+
+                    b.Property<string>("TDP");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("cpus");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.DocForPain", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Contragent");
+
+                    b.Property<string>("DataLoad");
+
+                    b.Property<string>("DataLoad1");
+
+                    b.Property<string>("Dataload2");
+
+                    b.Property<string>("Dataload3");
+
+                    b.Property<string>("Organization");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("docForPains");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Dogovor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("dogovors");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.GraficsCard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Cores");
+
+                    b.Property<string>("GraphicsCore");
+
+                    b.Property<string>("Herts");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("VRAM");
+
+                    b.Property<string>("Voltage");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("grafics");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Oblast", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("oblasts");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Organisation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("organisations");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.OrganisationProfession", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CodeKP");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Organization");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("organisationProfessions");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Phones", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Battery");
+
+                    b.Property<string>("Cost");
+
+                    b.Property<string>("Firm");
+
+                    b.Property<string>("Model");
+
+                    b.Property<string>("Processor");
+
+                    b.Property<string>("Quantity");
+
+                    b.Property<string>("RAM");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("phones");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Regions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Oblast");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("regions");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Streets", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("NameStreen");
+
+                    b.Property<string>("Region");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("streets");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Tablets", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Battery");
+
+                    b.Property<string>("GPU");
+
+                    b.Property<string>("Model");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Processor");
+
+                    b.Property<string>("RAM");
+
+                    b.Property<string>("Resolution");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tablets");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Tivis", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Cost");
+
+                    b.Property<string>("Firm");
+
+                    b.Property<string>("Model");
+
+                    b.Property<string>("Quantity");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tivis");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.Users", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Password");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("users");
+                });
+
+            modelBuilder.Entity("InternetMarketWEB.Models.ZakazPokupatelya", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Contragent");
+
+                    b.Property<string>("Data");
+
+                    b.Property<string>("Organization");
+
+                    b.Property<string>("Sklad");
+
+                    b.Property<string>("Ysluga");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("zakazPokupatelyas");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")

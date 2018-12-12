@@ -1,0 +1,79 @@
+﻿@model InternetMarketWEB.Models.CPU
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>CPU</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Architecture" class="control-label"></label>
+                <input asp-for="Architecture" class="form-control" />
+                <span asp-validation-for="Architecture" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cores" class="control-label"></label>
+                <input asp-for="Cores" class="form-control" />
+                <span asp-validation-for="Cores" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Chastota" class="control-label"></label>
+                <input asp-for="Chastota" class="form-control" />
+                <span asp-validation-for="Chastota" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KESHL1" class="control-label"></label>
+                <input asp-for="KESHL1" class="form-control" />
+                <span asp-validation-for="KESHL1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KESHL2" class="control-label"></label>
+                <input asp-for="KESHL2" class="form-control" />
+                <span asp-validation-for="KESHL2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KESHL3" class="control-label"></label>
+                <input asp-for="KESHL3" class="form-control" />
+                <span asp-validation-for="KESHL3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GPU" class="control-label"></label>
+                <input asp-for="GPU" class="form-control" />
+                <span asp-validation-for="GPU" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RAM" class="control-label"></label>
+                <input asp-for="RAM" class="form-control" />
+                <span asp-validation-for="RAM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TDP" class="control-label"></label>
+                <input asp-for="TDP" class="form-control" />
+                <span asp-validation-for="TDP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

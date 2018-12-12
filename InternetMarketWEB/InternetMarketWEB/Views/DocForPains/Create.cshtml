@@ -1,0 +1,59 @@
+﻿@model InternetMarketWEB.Models.DocForPain
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>DocForPain</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Organization" class="control-label"></label>
+                <input asp-for="Organization" class="form-control" />
+                <span asp-validation-for="Organization" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contragent" class="control-label"></label>
+                <input asp-for="Contragent" class="form-control" />
+                <span asp-validation-for="Contragent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataLoad" class="control-label"></label>
+                <input asp-for="DataLoad" class="form-control" />
+                <span asp-validation-for="DataLoad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataLoad1" class="control-label"></label>
+                <input asp-for="DataLoad1" class="form-control" />
+                <span asp-validation-for="DataLoad1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dataload2" class="control-label"></label>
+                <input asp-for="Dataload2" class="form-control" />
+                <span asp-validation-for="Dataload2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dataload3" class="control-label"></label>
+                <input asp-for="Dataload3" class="form-control" />
+                <span asp-validation-for="Dataload3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

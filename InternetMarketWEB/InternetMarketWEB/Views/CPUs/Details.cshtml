@@ -1,0 +1,79 @@
+﻿@model InternetMarketWEB.Models.CPU
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CPU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Architecture)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Architecture)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cores)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Chastota)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Chastota)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KESHL1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KESHL1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KESHL2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KESHL2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KESHL3)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KESHL3)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GPU)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GPU)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RAM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RAM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TDP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TDP)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,55 @@
+﻿@model InternetMarketWEB.Models.GraficsCard
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GraficsCard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GraphicsCore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GraphicsCore)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cores)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Herts)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Herts)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VRAM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VRAM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Voltage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Voltage)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

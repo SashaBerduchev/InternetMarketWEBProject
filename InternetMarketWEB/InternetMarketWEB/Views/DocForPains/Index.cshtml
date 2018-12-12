@@ -1,0 +1,66 @@
+﻿@model IEnumerable<InternetMarketWEB.Models.DocForPain>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Organization)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contragent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLoad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLoad1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dataload2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dataload3)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Organization)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contragent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLoad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLoad1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dataload2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dataload3)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
